@@ -46,10 +46,10 @@ from pathlib import Path
 BASE_DIR = Path(__file__).parent.parent
 
 @st.cache_data
-df = pd.read_csv(BASE_DIR / "data" / "steam_cleaned.csv")
+def load_data():
+    return pd.read_csv(BASE_DIR / "data" / "steam_cleaned.csv")
 
 df = load_data()
-
 # ============================================================
 # COLOUR PALETTE
 # ============================================================
