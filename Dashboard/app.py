@@ -42,8 +42,11 @@ st.markdown(
 # ============================================================
 
 @st.cache_data
-def load_data():
-    return pd.read_csv("data/steam_cleaned.csv")
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent.parent
+
+df = pd.read_csv(BASE_DIR / "data" / "steam_cleaned.csv")
 
 df = load_data()
 
