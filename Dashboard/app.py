@@ -14,13 +14,16 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+from pathlib import Path
+
 def load_css():
-    with open("style.css") as f:
+    css_path = Path(__file__).parent / "style.css"
+
+    with open(css_path) as f:
         st.markdown(
             f"<style>{f.read()}</style>",
             unsafe_allow_html=True
         )
-
 load_css()
 
 hide_streamlit_style = """
