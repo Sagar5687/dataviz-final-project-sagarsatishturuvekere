@@ -43,7 +43,7 @@ st.markdown(
 
 from pathlib import Path
 
-BASE_DIR = Path(__file__).parent.parent
+BASE_DIR = Path(__file__).parent
 
 @st.cache_data
 def load_data():
